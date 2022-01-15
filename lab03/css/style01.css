@@ -33,3 +33,37 @@ body{
     color:#fff;
     clear: both;
 }
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li{
+    padding-left: 10px;
+    background-color: #7b1fa2;
+    color:#fff;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 1px;
+}
+.menu li:hover{
+    background-color: #009688;
+}
+/* <ul class="sub-menu"> */
+.sub-menu{
+    background-color: #66cc33;
+    list-style: none;
+    padding: 0;
+    
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 90px;
+}
+.sub-menu li{
+    background-color: #455a64;
+
+}
+.sub-menu li:hover{
+    background-color: #ffc107;
+    color: #000;
+}
