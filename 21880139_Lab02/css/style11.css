@@ -1,3 +1,18 @@
+body{
+    background-color: rgb(221,225,236);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.left{
+    width: 50%;
+    float:left;
+}
+.right{
+    width:50%;
+    float:right;
+}
+h2{
+    font-size:1.2em;
+}
 input{
     margin:5px;
 }
@@ -5,12 +20,55 @@ h2.caudan{
     font-size: 24px;
     line-height: 28px;
     width: auto;
+    color:rgba(13,56,95,255);
 }
 .inputtext{
     font-size:15px;
-    line-height: 16px;
     border-color: #ccd0d5;
     border-radius: 5px;
     min-height: 38px;
 }
+.ngaysinh{
+    font-size:20px;
+    margin-bottom: 10px;
+}
+.selectbox{
+    font-size: 15px;
+    margin:5px 10px 5px 0px;
+    min-height: 30px;
+    border-radius: 5px;
+}
+.taisao{
+    color:#7e90b8;
+    font-size: 12px;
+    display: inline-block;
+    margin:5px 10px 5px 0px;
+    width: 25%;
+}
+.radio{
+    font-size:20px;
+}
+p{
+    color:grey;
+    font-style: bold;
+}
+a{
+    color: #5e81bd;
+}
 
+input.submit-button{
+    background-color: #5d964a;
+    color:#fff;
+    font-style: bold;
+    padding: 8px 40px;
+    cursor:pointer;
+    margin: 4px 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+a.tao-trang{
+    color:#5e81bd;
+    font-weight: bold;
+}

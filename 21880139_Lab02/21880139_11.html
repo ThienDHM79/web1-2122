@@ -8,21 +8,26 @@
     <title> Dang ky</title>
 </head>
 <body>
-    <div>
+    <div class="left">
         <h2 class="caudan">
                 Facebook giúp bạn kết nối và chia sẻ với mọi
                 người trong cuộc sống của bạn.
         </h2>
+        <img src="fb.jpg" alt="fb connect">
     </div>
-    <div>
+    <div class="right">
         <h1>Đăng ký</h1>
-    <h2>Luôn miễn phí</h2>
+    <h2>Luôn miễn phí.</h2>
     <form action="01_Result.html" method="get">
-        <div>
-            <input type="text" class="inputtext" name="firstname" 
+        <div class="container">
+            <span style="width: 25%;">
+                <input type="text" name="firstname" class="inputtext"
             placeholder="Họ" size= "20">
-            <input type="text" class="inputtext" name="lasttname" 
+            </span>
+            <span style="width:25%;">
+                <input type="text" name="lasttname" class="inputtext"
             placeholder="Tên" size ="20">
+            </span>            
         </div>
         <div class="SoDienThoai">
             <input type="text" class="inputtext" name="phonenumber" 
@@ -32,20 +37,42 @@
             <input type="password" class="inputtext" name="password" 
             placeholder="Mật khẩu mới" size="50">
         </div>
-        <label for="ngaysinh">Ngày sinh</label> <br>
-        <select nane="day" class ="selectbox">
-            <option value="1">1</option>
-            <option value="30">30</option>
-        </select>
-        <select name="month" class="selectbox">
-            <option value="Tháng 1">Tháng 1</option>
-            <option value="Tháng 12">Tháng 12</option>
-        </select>
-        <select name="year" class="selectbox">
-            op
-        </select>
+        <div class="ngaysinh">
+            <label for="ngaysinh">Ngày sinh</label> <br>
+        </div>
+        <div>
+            <select nane="day" class ="selectbox">
+                <option value="1">1</option>
+                <option value="30">30</option>
+            </select>
+            <select name="month" class="selectbox">
+                <option value="Tháng 1">Tháng 1</option>
+                <option value="Tháng 12">Tháng 12</option>
+            </select>
+            <select name="year" class="selectbox">
+                <option value="1900">1900</option>
+                <option value="2000">2000</option>
+                <option value="2022">2022</option>
+            </select>
+            <span class="taisao">
+                Tại sao tôi cần cung cấp ngày sinh của mình?
+            </span>
+        </div>
+        <div class="radio">
+            <input type="radio" name="gioitinh" value="Nữ"><span>Nữ</span>
+            <input type="radio" name="gioitinh" Value="Nam"><span>Nam</span>
+        </div>
+        <p>Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với
+            <a href="01_Result.html">Điều khoản</a> của chúng tôi và
+            rằng bạn đã đọc <a href="01_Result.html">Chính sách dữ liệu</a>
+            của chúng tôi, bao gồm <a href="01_Result.html">Sử dụng cookie</a>.
+        </p>
+        <input type="submit" value="Tạo tài khoản" class="submit-button">
     </form>
+    <div class="brand">
+        <a href="01_Result.html" class="tao-trang">Tạo trang</a>
+        dành cho người nổi tiếng, nhãn hiệu hoặc doanh nghiệp.
     </div>
-    
+    </div>
 </body>
 </html>
