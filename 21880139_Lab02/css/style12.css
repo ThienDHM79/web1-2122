@@ -1,0 +1,29 @@
+h1, .title-1 , .title-2, .title-3,.text{
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    color: gray;
+    font-stretch: narrower;
+    text-align: center;
+
+}
+h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+.title-1, .title-3{
+    font-size: 24px;
+    font-weight: 500;
+}
+.title-2{
+    font-size: 16px;
+    font-weight: 700;
+}
+.title-3{
+    margin-top:50px;
+}
+.text{
+    font-weight: 500;
+}
+img .icon-service{
+    text-align: center;
+}
