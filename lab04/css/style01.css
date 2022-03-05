@@ -24,7 +24,7 @@
 }
 .container-2{flex-direction: column;}
 .container-3{flex-wrap: wrap;}
-.container-3 .item {flex-grow: 3;}
+.container-3 .item-3 {flex-grow: 3;}
 
 .container-4{
     flex-flow: row wrap;
