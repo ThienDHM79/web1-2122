@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event click</h1>
+    <button type="button" onclick="window.location='https://www.google.com';">Navigate to google</button>
+    <button type="button" onclick="window.alert(window.location);">show location url</button>
+    <hr>
+
+    <input type="text" name="" id="keyword">
+    <button type="button" onclick="Search()" id="btnSearch">
+        Search
+    </button>
+
+    <script type="text/javascript">
+        //cach 1 lay tu id cua button va thuc hien event click
+        var btnSearch = document.querySelector('#btnSearch');
+        btnSearch.addEventListener('click',Search);
+
+        //cach 2 lay id cua input va setup button onclick chay ham
+        function Search(){
+            let keyword = document.getElementById('keyword').value;
+            window.location = 'https://www.google.com/search?q=' + keyword;
+
+        }
+    </script>
+</body>
+</body>
+</html>
