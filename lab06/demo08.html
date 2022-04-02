@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get content</title>
+</head>
+<body>
+    <h1>Get element content</h1>
+    <div>
+        <p>this is paragraph 01</p>
+        <p>this is paragraph 02</p>
+    </div>
+
+    <script type="text/javascript">
+        let div_node = document.querySelector('div');
+        console.log('InnerHTML', div_node.innerHTML);
+        console.log('InnerText', div_node.innerText);
+        console.log('outerHTML', div_node.outerHTML);
+        console.log('outerHTML', div_node.outerText);
+
+        div_node.innerHTML = '<h3>hello w</h3>';
+        console.log('outerhtml',div_node.outerHTML);
+
+        div_node.outerHTML = "hello";
+        console.log(div_node.outerHTML);
+
+    </script>
+</body>
+</html>
