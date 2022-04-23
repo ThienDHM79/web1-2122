@@ -1,0 +1,10 @@
+#cuoiky{
+    color:#E6A756;
+}
+#tieude{
+    color: white;
+    /* text in box voi nen box la trang, opacity 0.85, text trong box mau den */
+}
+body{
+    background-image: url("./img/bg.img");
+}
