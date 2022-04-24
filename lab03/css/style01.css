@@ -18,7 +18,7 @@ body{
 }
 #left-sidebar, #right-sidebar{
     background-color: #ff9800;
-    min-height: 200px;
+    min-height: 100px;
     width: 20%;
     float: left;
 }
