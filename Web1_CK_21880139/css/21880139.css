@@ -1,10 +1,10 @@
-#cuoiky{
-    color:#E6A756;
-}
-#tieude{
-    color: white;
-    /* text in box voi nen box la trang, opacity 0.85, text trong box mau den */
-}
 body{
-    background-image: url("./img/bg.img");
+    background-image: url(../img/bg.jpg);
+}
+.text-orange{
+    color:#e6a756 !important;
+}
+h1{
+    font-size: 5em;
+    font-weight: lighter;
 }
