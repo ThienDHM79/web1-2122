@@ -4,7 +4,36 @@ body{
 .text-orange{
     color:#e6a756 !important;
 }
-h1{
+h1.text-white{
     font-size: 5em;
     font-weight: lighter;
+}
+.bg-dark{
+    background-color: rgba(47,23,15,0.9) !important;
+}
+a.nav-link{
+    color: white;
+    font-weight: bold;
+}
+.nav-link.active {
+    color:#e6a756 !important;
+}
+.bg-faded{
+    background-color: rgba(255,255,255,0.8);
+}
+.box-left{
+    position:absolute;
+    top: 3em;
+    left: 0;
+    width:45%;
+}
+.intro-img{
+    width:75%;
+}
+
+.box-center{
+    position: relative;
+    top: -7em;
+    margin: 0 auto;
+    width: 60%;
 }
