@@ -27,6 +27,12 @@ a.nav-link{
     left: 0;
     width:45%;
 }
+.box-right{
+    position: absolute;
+    top: 3em;
+    right: 0;
+    width: 45%;
+}
 .intro-img{
     width:75%;
 }
@@ -36,4 +42,19 @@ a.nav-link{
     top: -7em;
     margin: 0 auto;
     width: 60%;
+}
+.bg-orange{
+    background-color: #e6a756;
+}
+.form-box{
+    border-style: double;
+}
+.form-control{
+    margin: 10px;
+}
+.btn-primary{
+    border-color: none;
+    font-weight: bold;
+    position: relative;
+    left: 50%;
 }

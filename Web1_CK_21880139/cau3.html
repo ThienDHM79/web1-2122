@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>21880139</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--uu tien css nao thi de cuoi cung-->
+    <link rel="stylesheet" href="css/21880139.css">
+    <!-- Bootstrap CSS -->
+  </head>
+  <body>
+    <header class="container-fluid text-center py-5">
+        <h2 class="text-orange">BAI THI CUOI KY MON LAP TRINH WEB 1</h2>
+        <h1 class="text-white">DTTX- HK2/2019-2020</h1>
+    </header>
+    <nav class="container-fluid bg-dark text-white text-center py-3">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link " href="index.html">Cau 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cau2.html">Cau 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="cau3.html">Cau 3</a>
+        </li>
+    </ul>
+    </nav>
+    <div class="div" id="main">
+    </div>
+    <footer class="bg-dark text-white text-center py-3">Copyright &copy; by 21880139- Dao Huynh Minh Thien</footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="vendor/jquery/jquery-3.5.1.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/handlebarjs/handlebars-v4.4.3.js"></script>
+    <script src="vendor/data.js"></script>
+
+    <script id="template" type="text/x-handlebars-template">
+        {{#each data}}
+        {{#if isOdd}}
+        <div class="container text-center my-5 position-relative">
+            <img src="{{imagepath}}" alt="" class="img-fluid intro-img">
+            <!-- text box tuong doi voi box chua : post-->
+            <div class="text-center p-5 bg-faded box-left" >
+              <h2>{{slogan}}</h2>
+              <h1>{{{title}}}</h1>
+              </div>
+          </div>
+          {{else}}
+          <div class="container text-center my-5 position-relative">
+            <img src="{{imagepath}}" alt="" class="img-fluid intro-img">
+            <!-- text box tuong doi voi box chua : post-->
+            <div class="text-center p-5 bg-faded box-right" >
+              <h2>{{slogan}}</h2>
+              <h1>{{{title}}}</h1>
+              </div>
+          </div>
+          {{/if}}
+          {{/each}}
+    </script>
+    <script>
+        let jsonData = {
+            data: getData()
+        };
+        jsonData.data.forEach((item,index)=> {
+            item.isOdd = index % 2;
+        });
+
+        //xu ly handlebars
+        let target = $('#main');
+        let source = $('#template').html();
+        let template = Handlebars.compile(source);
+        $(target).html(template(jsonData)); 
+
+        
+    </script>
+
+</body>
+</html>
