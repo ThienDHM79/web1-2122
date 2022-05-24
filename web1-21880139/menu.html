@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/21880139.css">
+     <link rel="stylesheet" href="css/banner.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
+     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+ 
+    <title>Menu</title>
+</head>
+<body>
+     <!--Header-->
+     <header class="container">
+        <nav class="navbar navbar-expand-sm navbar-light px-0">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Ice-Cream" id="logo">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#menu" aria-controls="menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control" type="text" placeholder="Search" id="searchword">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit" id="btn-search"></button>
+                        </div>
+                    </div>
+                    
+                </form>
+                <div id="social">
+                    <a href="#" class="btn twitter"></a>
+                    <a href="#" class="btn facebook"></a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--/Header-->
+
+    <div class="container-fluid" id="small-banner">
+    </div>
+
+    <div class="container">
+        <h3 class="text-dark">Menu</h3>
+        <div class="font-weight-bold">Filter by category:</div>
+
+        <ul class="nav justify-content-left" id="gallery-categories">
+        </ul>
+
+        <div class="row" id="gallery">
+
+        </div>
+    </div>
+
+ <!--footer-->
+ <footer class="container-fluid">
+    <nav>
+        <ul>
+            <li ><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="menu.html">Menu</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div>
+        Ice-cream &copy; 2022 | <a href="#" class="text-uppercase">Privacy Policy</a>
+    </div>
+</footer>
+<!--/footer-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars-v4.7.7.js"></script>
+<script src="js/21880139.js"></script>
+<script id="gallery-categories-template" type="text/x-handlebars-template">
+    <li class="nav-item">
+        <a class="nav-link disabled pl-0" href="#" onclick="loadGallery(this)">Show all</a>
+    </li>
+    {{#each data}}
+    <li class="nav-item">
+        <a class="nav-link" href="#" onclick="loadGallery(this, {{id}})">{{name}}</a>
+    </li>
+    {{/each}}
+</script>
+<script id="gallery-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="col-sm-6 col-md-4 col-lg-3"><img src="{{imagepath}}" alt="" class="img-thumbnail"></div>
+    {{/each}}
+</script>
+<script>
+    $(document).ready(function(){
+        loadData('gallery-categories', '#gallery-categories', '#gallery-categories-template');
+        loadData('gallery','#gallery', '#gallery-template');
+    })
+
+    function loadGallery(link, id){
+        if(id){
+            loadData(`gallery/categories/${id}`,'#gallery', '#gallery-template'); //co {} dung dau nhay nguoc
+        }
+        else{
+            loadData('gallery','#gallery', '#gallery-template');
+        }
+        $('#gallery-categories .nav-link').removeClass('disabled');
+        $(link).addClass('disabled');
+    }
+</script>
+</body>
+</html>

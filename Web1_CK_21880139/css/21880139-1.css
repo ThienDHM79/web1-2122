@@ -1,0 +1,40 @@
+body{
+    background-image: url(../img/bg.jpg);
+}
+.text-orange, .active, .nav-link:hover{
+    color: #E6A756 !important;
+    font-weight: bold;
+}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+}
+.title{
+    color: #fff;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+footer, .bg-brown{
+    background-color: rgba(47,23,15,0.9);
+}
+.bg-faded{
+    background-color: rgba(255,255,255,0.85);
+}
+
+.box-center{
+    position: relative;
+    width: 70%;
+    top: -4em;
+    left: 10%;
+}
+div h3{
+    font-size: 1em;
+}
+div h1{
+    font-size: 2em;
+    font-weight: lighter;
+    margin-bottom: 1em;
+}
+
+
