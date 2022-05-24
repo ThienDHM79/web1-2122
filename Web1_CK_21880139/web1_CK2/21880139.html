@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>21880139</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="21880139.css">
+  </head>
+  <body>
+      <div class="container-fluid">
+        <div class="row cau1">
+            <a href="" name="#cau1"></a>
+            <div class="container-fluid bg">
+                <h1 class="text-center text-white">Lap trinh WEB 1</h1>
+                <ul class="nav justify-content-center text-white">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#cau1">Cau 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cau2">Cau 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cau3">Cau 3</a>
+                    </li>
+                </ul>
+                <div class="container">
+                    <div class="box text-left position-relative text-white">
+                        <h2>DAO HUYNH MINH THIEN - 21880139</h2>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deleniti rem delectus quo, dolores error fuga, vel dicta, molestiae sapiente autem corrupti nostrum mollitia exercitationem officia dignissimos? Dolorum, iusto rem!</P>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="row py-5">
+            <a href="" name="cau2"></a>
+            <h2 class="text-center container-fluid">Cau 2</h2>
+            <div class="row container mx-5">
+                <div id="gallery">
+                    <div class="flex-container">
+                        <img src="./images/gallery/01.jpg" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                </div>
+                <div id="gallery">
+                    <div class="flex-container">
+                        <img src="./images/gallery/01.jpg" alt="" class="img-fluid img-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-3 text-center py-3">
+            <form onsubmit="alert('Thank you for your message!')" method="get" class="container text-center">
+                <div class="container form-input py-3">
+                    
+                    <h2>Cau 3</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, magnam ad? Sint est molestiae ea minus quasi, obcaecati modi consectetur, nam adipisci aliquam laudantium. Et sit eveniet doloremque sunt labore?</p>
+                    <input type="email" class="form-control" placeholder='Email' oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter your email address')" required>
+                    <div class="form-group">
+                      <label for=""></label>
+                      <textarea class="form-control" name="message" id="message" rows="3" placeholder="Message" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter your message')" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary text-center text-white" >Submit</button>
+                </div>
+            </form>
+            <a href="#" name="cau3"></a>
+        </div>
+      </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="vendor/jquery/jquery-3.5.1.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/handlebarjs/handlebars-v4.7.6.js"></script>
+    <script src="vendor/data.js"></script>
+    <script src="vendor/handlebarjs/handlebars-pagination-helper.js"></script>
+
+    <script id="gallery-template">
+        <div class="flex-container mx-2">
+            <img src="{{id}}" alt="" class="img-fluid img-thumbnail">
+        </div>
+        //chua xong
+    </script>
+
+    <script>
+    let jsonData = {
+    data: getImages(2)
+    };
+    // Xu ly handlebars
+    let target = $('#gallery');
+    let source = $('#gallery-template');
+    let template = Handlebars.compile(source);
+    $(target).html(template(jsonData));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+
+.bg{
+    background-blend-mode: multiply;
+  background: url(./images/backgrounds/bg-01.jpg) rgba(0, 0, 0, 0.55);
+}
+
+h1{
+    font-weight: lighter;
+}
+.nav{
+    margin: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgba(44, 153, 170, 0.5);
+}
+li>a{
+    color: white;
+}
+.box{
+    position: absolute;
+    width:60%;
+    left:0;
+}
+#gallery{
+    flex-basis: 21%;
+}
+.bg-3{
+    background-image: url(./images/backgrounds/bg-03.jpg);
+}
+.form-input{
+    background-blend-mode: multiply;
+    background-color: rgba(255,255, 255, 0.8);
+    width:50%;
+    left:20%;
+}
+.btn-primary{
+    background-color: gray;
+    border-color: gray;
+}
